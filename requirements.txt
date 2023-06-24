@@ -1,0 +1,9 @@
+Dependices Used:
+1. Flask mail
+2. Flask
+3. python-dotenv
+4. bcrypt
+5. flask_sqlalchemy
+6. mysql-connector-python
+
+
