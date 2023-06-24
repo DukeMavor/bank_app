@@ -5,5 +5,5 @@ Dependices Used:
 4. bcrypt
 5. flask_sqlalchemy
 6. mysql-connector-python
-
+7. wkhtmltox
 
