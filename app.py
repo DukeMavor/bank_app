@@ -427,6 +427,20 @@ def transaction_history():
         return redirect(url_for('login'))
 
 
+@app.route('/exchange_rate')
+def exchange_rate():
+    user_id = session.get('user_id')
+
+    if user_id:
+        # Retrieve the user from the database using user_id
+        user = User.query.get(user_id)
+
+        return render_template('soon.html', user=user)
+    
+    else:
+        flash('You need to log in first.', 'danger')
+        return redirect(url_for('login'))
+
 
 
 
