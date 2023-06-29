@@ -53,21 +53,6 @@ class User(db.Model):
     card_number = db.Column(db.String(16), unique=True)
     balance = db.Column(db.Float, default=50000.00)
 
-# class Transaction(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-#     recipient_name = db.Column(db.String(100))
-#     recipient_card_number = db.Column(db.String(16))
-#     amount = db.Column(db.Float)
-#     type = db.Column(db.String(10)) 
-#     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-    
-#     user = db.relationship('User', backref='transactions')
-
-#     def __repr__(self):
-#         return f"Transaction(id={self.id}, user_id={self.user_id}, recipient_name={self.recipient_name}, " \
-#                f"recipient_card_number={self.recipient_card_number}, amount={self.amount}, " \
-#                f"timestamp={self.timestamp})"
 
 class Transaction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
